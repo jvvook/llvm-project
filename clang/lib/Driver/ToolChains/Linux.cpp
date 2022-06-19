@@ -584,6 +584,7 @@ void Linux::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
   // add even when Clang is acting as-if it were a system compiler.
   addExternCSystemInclude(DriverArgs, CC1Args, SysRoot + "/include");
 
+  addExternCSystemInclude(DriverArgs, CC1Args, SysRoot + "/usr/include/fortify");
   addExternCSystemInclude(DriverArgs, CC1Args, SysRoot + "/usr/include");
 
   if (!DriverArgs.hasArg(options::OPT_nobuiltininc) && getTriple().isMusl())
