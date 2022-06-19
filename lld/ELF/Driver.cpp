@@ -1184,7 +1184,7 @@ static void readConfigs(opt::InputArgList &args) {
   config->zNodefaultlib = hasZOption(args, "nodefaultlib");
   config->zNodelete = hasZOption(args, "nodelete");
   config->zNodlopen = hasZOption(args, "nodlopen");
-  config->zNow = getZFlag(args, "now", "lazy", false);
+  config->zNow = getZFlag(args, "now", "lazy", true);
   config->zOrigin = hasZOption(args, "origin");
   config->zPacPlt = hasZOption(args, "pac-plt");
   config->zRelro = getZFlag(args, "relro", "norelro", true);
