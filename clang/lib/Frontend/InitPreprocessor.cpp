@@ -825,8 +825,10 @@ static void InitializePredefinedMacros(const TargetInfo &TI,
     Builder.defineMacro("__clang_wide_literal_encoding__", "\"UTF-16\"");
   }
 
-  if (LangOpts.Optimize)
+  if (LangOpts.Optimize) {
     Builder.defineMacro("__OPTIMIZE__");
+    Builder.defineMacro("_FORTIFY_SOURCE", "2");
+  }
   if (LangOpts.OptimizeSize)
     Builder.defineMacro("__OPTIMIZE_SIZE__");
 
